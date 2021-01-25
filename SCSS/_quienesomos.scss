@@ -1,0 +1,39 @@
+.quienesomos {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  margin-top: 3rem;
+
+  .phone {
+    width: 100vw;
+    position: relative;
+    text-align: center;
+  }
+
+  p {
+    position: relative;
+    font-family: "IBM Plex Mono", monospace;
+    color: black;
+    margin-top: 1em;
+    padding-right: 1em;
+    font-size: 0.875em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    width: 70%;
+    left: 1em;
+  }
+  .column {
+    display: block;
+  }
+}
+h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.25em;
+  color: rgb(0, 0, 0);
+  position: relative;
+  width: 50%;
+  font-weight: bold;
+  left: 0.5em;
+}

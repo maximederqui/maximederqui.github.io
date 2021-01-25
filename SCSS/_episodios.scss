@@ -1,0 +1,49 @@
+.episodios {
+  position: relative;
+}
+
+.fondo {
+  background: rgb(0, 0, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(0, 0, 163, 1) 100%
+  );
+  position: absolute;
+  width: 100vw;
+  height: 75.188rem;
+  transform: skewY(-5deg);
+  z-index: -1;
+  margin-top: 1.5rem;
+}
+
+.iframes {
+  position: relative;
+  padding: 1em;
+}
+
+x.imagenes {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0.688rem 0rem 0.688rem;
+  top: -54rem;
+  width: 20rem;
+  img {
+    width: 18.625rem;
+    height: 14.063rem;
+    margin-bottom: 0.688rem;
+  }
+}
+
+h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.25rem;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 1.313rem;
+}

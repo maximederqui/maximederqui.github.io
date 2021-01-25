@@ -1,0 +1,21 @@
+footer {
+  width: 99vw;
+  height: 17vh;
+  text-align: center;
+  position: relative;
+  top: 3rem;
+  background-color: rgb(255, 255, 255);
+  font-family: "IBM Plex Mono", monospace;
+  color: rgba(6, 10, 36, 1);
+  justify-content: center;
+  bottom: 0;
+  font-weight: 900;
+}
+
+.logos3 {
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

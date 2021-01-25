@@ -1,0 +1,71 @@
+.header {
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    background-color: #0000ec;
+    display: block;
+    position: relative;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-icon {
+    padding: 1.4rem 1.188rem;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    .nav-icon {
+      background-color: rgb(0, 0, 0);
+      display: block;
+      height: 2px;
+      width: 18px;
+      position: relative;
+      transition: background 0.2s ease-out;
+    }
+  }
+}
+.header {
+  .menu-icon {
+    .nav-icon::before {
+      background-color: rgb(0, 0, 0);
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 5px;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
+
+.header {
+  .menu-icon {
+    .nav-icon::after {
+      background-color: rgb(0, 0, 0);
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: -5px;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
+
+.header {
+  .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+}
+
+​.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+​.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}

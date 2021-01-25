@@ -1,0 +1,59 @@
+.nosotros {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  margin-top: 10rem;
+  position: relative;
+  .temas {
+    text-align: center;
+  }
+
+  h6 {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: rgba(6, 10, 36, 1);
+    font-size: 2.25rem;
+    position: absolute;
+    top: -7rem;
+    margin-bottom: 4rem;
+    left: 0.5em;
+  }
+  img {
+    margin-bottom: 1rem;
+  }
+  .trabajo {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.5rem;
+    left: 5rem;
+    top: 4rem;
+    font-weight: 700;
+    margin-bottom: 3.125rem;
+    bottom: 2em;
+  }
+  .repensado {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 3.125rem;
+    left: 5.1rem;
+    top: 22rem;
+    font-weight: 700;
+    bottom: 2em;
+  }
+  .bases {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 3.125rem;
+    font-weight: 700;
+    bottom: 2em;
+  }
+  .seguridad {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 3.125rem;
+    left: 3.5rem;
+    top: 49rem;
+    font-weight: 700;
+    bottom: 2em;
+  }
+}

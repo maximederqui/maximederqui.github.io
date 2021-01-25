@@ -1,0 +1,51 @@
+.inicio {
+  position: relative;
+  flex-flow: column;
+  .presentacion {
+    display: block;
+    position: relative;
+    align-items: center;
+    .p {
+      display: flex;
+      flex-flow: wrap row;
+      margin: 0 1rem 0 1rem;
+      .world {
+        text-decoration: line-through;
+        text-indent: 10px;
+      }
+    }
+  }
+
+  p {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: rgba(6, 10, 36, 1);
+    font-size: 2.25em;
+    font-weight: 900;
+  }
+
+  .texto {
+    font-family: "IBM Plex Mono", monospace;
+    color: rgba(6, 10, 36, 1);
+    font-size: 0.875rem;
+    position: relative;
+    flex-wrap: wrap;
+    font-size: 0.875em;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .boton {
+    background-color: rgba(0, 243, 187, 1);
+    border: 1px rgba(0, 243, 187, 1) solid;
+    margin: 2.25rem 1rem 0rem 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    position: relative;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 2.25rem;
+    width: 90%;
+    padding-top: 0.813em;
+    padding-bottom: 0.813rem;
+  }
+}
+
+/* ***DESKTOP VERSION  *** */
