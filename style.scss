@@ -1,22 +1,22 @@
-@import "../Podcast/scss/header";
-@import "../Podcast/SCSS/menu";
-@import "../Podcast/SCSS/presentacion";
-@import "../Podcast/SCSS/episodios";
-@import "../Podcast/SCSS/quienesomos";
-@import "../Podcast/SCSS/invitados";
-@import "../Podcast/SCSS/nosotros";
-@import "../Podcast/SCSS/novedades";
-@import "../Podcast/SCSS/footer";
-@import "../podcast/SCSS/mediaquerie";
+@import "../Podcast/Styles/header";
+@import "../Podcast/Styles/menu";
+@import "../Podcast/Styles/presentacion";
+@import "../Podcast/Styles/episodios";
+@import "../Podcast/Styles/quienesomos";
+@import "../Podcast/Styles/invitados";
+@import "../Podcast/Styles/nosotros";
+@import "../Podcast/Styles/novedades";
+@import "../Podcast/Styles/footer";
+@import "../podcast/Styles/mediaquerie";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 body {
   width: 100vw;
-  max-width: 1500px;
+  max-width: 1800px;
 }

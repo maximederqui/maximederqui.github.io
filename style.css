@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header {
   background-color: white;
   -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
@@ -78,44 +77,48 @@
   transition: background 0.2s ease-out;
 }
 
-.header .menu-icon .nav-icon::before {
-  background-color: black;
+.header .menu-icon .nav-icon:after {
+  background: black;
   content: "";
   display: block;
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 5px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  top: -5px;
 }
 
-.header .menu-icon .nav-icon::after {
-  background-color: black;
+.header .menu-icon .nav-icon:before {
+  background: black;
   content: "";
   display: block;
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -5px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  top: 5px;
 }
 
 .header .menu-btn:checked ~ .menu {
   max-height: 240px;
 }
 
-​.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 0;
 }
 
-​.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
 }
 
 .inicio {
@@ -190,8 +193,8 @@
 
 .fondo {
   background: blue;
-  background: -webkit-gradient(linear, left bottom, left top, from(blue), to(#0000a3));
-  background: linear-gradient(0deg, blue 0%, #0000a3 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(blue), to(#5c5cac));
+  background: linear-gradient(0deg, blue 0%, #5c5cac 100%);
   position: absolute;
   width: 100vw;
   height: 75.188rem;
@@ -203,7 +206,11 @@
 
 .iframes {
   position: relative;
-  padding: 1em;
+  padding: 0.688em;
+}
+
+.iframes iframe {
+  width: 100%;
 }
 
 x.imagenes {
@@ -289,7 +296,7 @@ h4 {
 }
 
 .invitados {
-  width: 90.5rem;
+  width: 100vw;
   position: relative;
 }
 
@@ -427,7 +434,7 @@ h5 {
 }
 
 footer {
-  width: 99vw;
+  width: 100%;
   height: 17vh;
   text-align: center;
   position: relative;
@@ -467,10 +474,16 @@ footer {
   }
   .header .menu {
     clear: none;
-    margin-left: 41rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     max-height: none;
     background-color: white;
     color: #060a24;
+    padding-right: 1rem;
   }
   .header .menu-icon {
     display: none;
@@ -497,14 +510,14 @@ footer {
             box-shadow: none;
     margin: 1.375rem 0rem 1.375rem 0;
     padding-left: 6.25rem;
-    width: 100vw;
+    width: 98vw;
   }
 }
 
 /* DESKTOP INICIO */
 @media screen and (min-width: 900px) {
   .inicio .presentacion .boton {
-    margin: 3.5rem 0 0 12.5rem;
+    margin: 4.5rem 0 0 12.5rem;
     width: 14.125rem;
     height: 3.5rem;
     font-size: 1.125rem;
@@ -512,7 +525,7 @@ footer {
     margin-bottom: 2rem;
   }
   .inicio .presentacion .p .hola {
-    margin: 7.5rem 0 0 12.5rem;
+    margin: 7.5rem 0 0 11.5rem;
     font-weight: bold;
   }
   .inicio .presentacion .p .world {
@@ -520,13 +533,13 @@ footer {
     font-weight: bold;
   }
   .inicio .presentacion .p .hola2 {
-    margin: 7.5rem 0 0 1rem;
+    margin: 7.5rem 0 0 0rem;
   }
   .inicio .presentacion .p .texto {
-    margin: 0 38.25rem 0 12.5rem;
-    width: 39.25rem;
+    padding: 11em 0 0 11.5rem;
+    width: 39.25em;
     height: 3rem;
-    font-size: 1rem;
+    position: absolute;
   }
 }
 
@@ -538,24 +551,42 @@ footer {
 
 /* DESKTOP EPISODIOS */
 @media screen and (min-width: 900px) {
-  .episodios {
+  #episodios {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 1rem;
+    width: 100vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-top: 1rem;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin-bottom: 3rem;
   }
-  iframe {
-    width: 36.5rem;
-    height: 14.5rem;
-    margin: 1.625rem 0rem 4.5rem 4rem;
+  #episodios .iframes {
+    width: 100%;
+    height: 70vh;
     position: relative;
+    margin: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #episodios .iframes iframe {
+    width: 40vw;
+  }
+  #episodios .iframes .iframe1 {
+    margin-bottom: 72px;
+  }
+  #episodios .iframes .iframe2 {
+    margin-left: 72px;
+    margin-bottom: 72px;
+  }
+  #episodios .iframes .iframe3 {
+    margin-bottom: 72px;
+  }
+  #episodios .iframes .iframe4 {
+    margin-left: 72px;
+    margin-bottom: 72px;
   }
   h3 {
     color: white;
@@ -568,14 +599,15 @@ footer {
     height: 65.162rem;
     width: 100vw;
   }
+  /* DESKTOP QUIENES SOMOS */
 }
 
-/* DESKTOP QUIENES SOMOS */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (min-width: 900px) {
   .quienesomos .phone {
     width: 28.575rem;
     height: 41.25rem;
-    margin-left: 12.5rem;
+    margin-left: 10%;
+    top: 2rem;
   }
   .quienesomos {
     display: -webkit-box;
@@ -588,26 +620,33 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 0;
+    margin-bottom: 64px;
+    margin-top: 17em;
   }
   h4 {
     width: auto;
     height: 3.875rem;
-    top: 10rem;
+    top: 30%;
     position: absolute;
-    left: -2em;
+    left: 1.8%;
   }
   .quienesomos .texto2 {
-    top: 15em;
+    top: 37%;
     width: 80%;
     height: 12.75rem;
-    left: -5em;
+    left: 1.8%;
+    font-size: 1em;
+    margin-bottom: 1vw;
+    position: relative;
   }
   .quienesomos .texto3 {
     width: 80%;
     height: 12.75rem;
-    left: -5em;
-    top: 6.5em;
+    left: 1.8%;
+    top: 8rem;
+    font-size: 1em;
+    margin-bottom: 1vw;
+    position: relative;
   }
   .column {
     width: 39%;
@@ -615,8 +654,11 @@ footer {
   }
 }
 
-/* DESKTOP INVITADOS */
 @media screen and (min-width: 900px) {
+  /* DESKTOP INVITADOS */
+}
+
+@media screen and (min-width: 900px) and (min-width: 900px) {
   h5 {
     font-size: 3rem;
     margin-left: 12.5rem;
@@ -632,16 +674,19 @@ footer {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
   }
   .invitados .pics {
-    width: 28.4em;
+    width: 33.3%;
     height: 22.75em;
   }
 }
 
-/* DESKTOP NOSOTROS */
 @media screen and (min-width: 900px) {
+  /* DESKTOP NOSOTROS */
+}
+
+@media screen and (min-width: 900px) and (min-width: 900px) {
   .nosotros .temas {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -659,15 +704,20 @@ footer {
     display: block;
     height: 6px;
   }
-  h6 {
+  .nosotros h6 {
     left: 12.5rem;
+    font-weight: 900;
+    font-size: 3rem;
   }
 }
 
-/* DESKTOP NOVEDADES */
 @media screen and (min-width: 900px) {
+  /* DESKTOP NOVEDADES */
+}
+
+@media screen and (min-width: 900px) and (min-width: 900px) {
   .novedades .fondo2 {
-    height: 32.375rem;
+    height: 32.375em;
     width: 100vw;
   }
   .novedades article {
@@ -701,8 +751,11 @@ footer {
   }
 }
 
-/* DESKTOP FOOTER */
 @media screen and (min-width: 900px) {
+  /* DESKTOP FOOTER */
+}
+
+@media screen and (min-width: 900px) and (min-width: 900px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -741,11 +794,11 @@ footer {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 body {
   width: 100vw;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 /*# sourceMappingURL=style.css.map */
